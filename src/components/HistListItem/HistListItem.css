@@ -1,0 +1,13 @@
+.hist-list-item {
+  display: flex;
+  width: 100%;
+  max-width: 177px;
+  border: 1px solid red;
+  color: #fff;
+}
+
+.hist-list-item__color {
+  width: 20px;
+  height: 20px;
+  border: 1px solid red
+}

@@ -1,13 +1,21 @@
 import './HistList.css';
+import HistListItem from '../HistListItem/HistListItem';
 
 function HistList(props) {
 
   return (
-    <dl className='hist-list'>
-      <dt className='hist-list__term'>риски</dt>
-      <dd className='hist-list__description'>9999</dd>
-    </dl>
+    <ul className='hist-list'>
+      {props.data.map((sector) => {
+        return ((
+          <HistListItem
+            name={sector.name}
+            count={sector.count}
+            color={sector.color}
+          />
+        ))
+      })};
+    </ul>
   )
-}
+};
 
 export default HistList;

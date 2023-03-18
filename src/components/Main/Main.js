@@ -7,7 +7,10 @@ function Main(props) {
   return (
     <main className='main'>
       <Header />
-      <DiagrammaSection />
+      <DiagrammaSection
+        data={props.data}
+        state={props.state}
+      />
     </main>
   )
 }

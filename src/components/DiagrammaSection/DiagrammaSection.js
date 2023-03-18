@@ -8,10 +8,14 @@ function DiagrammaSection(props) {
     <section className='diagramma-section'>
       <h2 className='diagramma-section__title'>Статистика осмотров</h2>
       <div className='diagramma-section__diagramma-wrap'>
-        <Diagramma />
+        <Diagramma
+          data={props.data}
+        />
       </div>
       <div className='diagramma-section__hist-list'>
-        <HistList />
+        <HistList
+          data={props.data}
+        />
       </div>
     </section>
   )

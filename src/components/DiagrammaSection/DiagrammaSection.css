@@ -5,3 +5,8 @@
   font-size: 16px;
   letter-spacing: 5%;
 }
+
+.diagramma-section__diagramma-wrap {
+  width: 350px;
+  height: 175px;
+}
