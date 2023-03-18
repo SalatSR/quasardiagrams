@@ -1,0 +1,10 @@
+.header {
+}
+
+.header__title {
+  color: #fff;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 96px;
+  letter-spacing: 5%;
+}

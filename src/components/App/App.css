@@ -1,5 +1,15 @@
-.App {
-  text-align: center;
+.app {
+  background-color: #1E1E1E;
+}
+
+.app__container {
+  min-width: 320px;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: "Inter", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App-logo {
