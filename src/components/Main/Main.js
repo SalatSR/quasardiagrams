@@ -1,13 +1,13 @@
 import './Main.css';
 import Header from '../Header/Header';
-import Diagramma from '../Diagramma/Diagramma';
+import DiagrammaSection from '../DiagrammaSection/DiagrammaSection';
 
 function Main(props) {
 
   return (
     <main className='main'>
       <Header />
-      <Diagramma />
+      <DiagrammaSection />
     </main>
   )
 }
