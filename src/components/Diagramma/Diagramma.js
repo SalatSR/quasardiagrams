@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 
 function Diagramma(props) {
 
+
+
   /** Отрисовываем диаграмму */
   useEffect(() => {
 
@@ -19,7 +21,6 @@ function Diagramma(props) {
       ctx.arc(75, 75, 75, currentAngle, currentAngle + portionAngle);
       currentAngle += portionAngle;
       ctx.lineTo(75, 75);
-      // ctx.lineTo(100, 100);
       //заполнение секторов соответствующим цветом
       ctx.fillStyle = moodValue.color;
       ctx.fill();
@@ -27,11 +28,20 @@ function Diagramma(props) {
   }, [props.data])
 
   return (
+    <div className='diagramma-wrapper'>
       <canvas
         className="diagramma"
         width={150}
         height={150} >
       </canvas>
+      <div
+        className='diagramma-info'
+        width={90}
+        height={90} >
+        <span className='diagramma-info_number'>2342</span>
+        <span className='diagramma-info_span'>всего</span>
+      </div>
+    </div>
   );
 };
 
