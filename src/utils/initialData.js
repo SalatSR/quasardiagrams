@@ -14,11 +14,6 @@ export let initialData = [
     'count': 815,
     'color': '#31B07E',
   },
-  {
-    'name': 'в ttttt',
-    'count': 1000,
-    'color': 'blue',
-  },
 ];
 
 export let sectionState = 1;

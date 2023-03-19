@@ -17,16 +17,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90px;
-  height: 90px;
   border-radius: 50%;
 }
 
-.diagramma-info_number {
+.diagramma-info_number_0,
+.diagramma-info_number_1 {
   font-size: 20px;
 }
 
+.diagramma-info_number_2 {
+  font-size: 24px;
+}
+
 .diagramma-info_span {
-  font-size: 10px;
   color: #E5D8EB;
+  opacity: .5;
+}
+
+.diagramma-info_span_0,
+.diagramma-info_span_1 {
+  font-size: 10px;
+}
+
+.diagramma-info_span_2 {
+  font-size: 16px;
 }

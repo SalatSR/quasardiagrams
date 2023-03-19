@@ -16,6 +16,7 @@ function HistList({data, state}) {
             name={sector.name}
             count={sector.count}
             color={sector.color}
+            state={state}
           />
         ))
       })}

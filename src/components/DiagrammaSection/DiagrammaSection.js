@@ -29,7 +29,9 @@ function DiagrammaSection({ data, state }) {
           diagramma-section__content
           diagramma-section__content_${isState}`
         }>
-        <Diagramma data={data} />
+        <Diagramma
+          data={data}
+          state={isState} />
         <HistList
           data={data}
           state={isState} />
