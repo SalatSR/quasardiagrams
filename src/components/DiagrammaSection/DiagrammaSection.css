@@ -5,13 +5,14 @@
   font-family: "WorcSans", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: 5%;
+  letter-spacing: 1px;
   flex-direction: column;
   align-items: center;
   width: 250px;
   margin: 0 auto;
   padding: 25px 32px;
   border-radius: 10px;
+  transition: all .2s linear;
 }
 
 .diagramma-section__title {
@@ -22,16 +23,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: all .2s linear;
 }
 
-@media screen and (min-width: 360px) {
-
-}
+@media screen and (min-width: 360px) {}
 
 @media screen and (min-width: 550px) {
-  
+  .diagramma-section {
+    flex-direction: column;
+    align-items: center;
+    width: 520px;
+    padding: 20px 25px 32px;
+  }
+
+  .diagramma-section__title {
+    align-self: flex-start;
+  }
+
+  .diagramma-section__content {
+    align-items: center;
+    justify-content: space-around;
+    min-width: 100%;
+  }
 }
 
-@media screen and (min-width: 800px) {
-  
-}
+@media screen and (min-width: 800px) {}

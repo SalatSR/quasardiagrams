@@ -17,16 +17,6 @@ let initialData = [
     'count': 815,
     'color': '#31B07E',
   },
-  {
-    'name': 'test-1',
-    'count': 815,
-    'color': 'blue',
-  },
-  {
-    'name': 'test-2',
-    'count': 815,
-    'color': 'purple',
-  },
 ];
 
 function App() {
