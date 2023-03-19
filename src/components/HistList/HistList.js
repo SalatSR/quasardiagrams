@@ -13,7 +13,7 @@ function HistList(props) {
             color={sector.color}
           />
         ))
-      })};
+      })}
     </ul>
   )
 };

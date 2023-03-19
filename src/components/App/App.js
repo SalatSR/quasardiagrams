@@ -5,17 +5,17 @@ let initialData = [
   {
     'name': 'риски',
     'count': 1301,
-    'color': 'yellow',
+    'color': '#FBDE37',
   },
   {
     'name': 'опасность',
     'count': 226,
-    'color': 'red',
+    'color': '#E25E65',
   },
   {
     'name': 'в норме',
     'count': 815,
-    'color': 'green',
+    'color': '#31B07E',
   },
   {
     'name': 'test-1',

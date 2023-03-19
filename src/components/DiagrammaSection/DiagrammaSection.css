@@ -1,12 +1,37 @@
-.diagramma-section__title {
+.diagramma-section {
+  background-color: #171820;
   color: #fff;
+  display: flex;
   font-family: "WorcSans", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 5%;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  margin: 0 auto;
+  padding: 25px 32px;
+  border-radius: 10px;
 }
 
-.diagramma-section__diagramma-wrap {
-  width: 350px;
-  height: 175px;
+.diagramma-section__title {
+  padding-bottom: 21px;
+}
+
+.diagramma-section__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 360px) {
+
+}
+
+@media screen and (min-width: 550px) {
+  
+}
+
+@media screen and (min-width: 800px) {
+  
 }

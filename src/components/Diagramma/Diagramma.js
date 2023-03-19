@@ -16,9 +16,10 @@ function Diagramma(props) {
       let portionAngle = (moodValue.count / totalNumberOfPeople) * 2 * Math.PI;
       //рисование дуги и линии к центру, чтобы отличить срез от остальных
       ctx.beginPath();
-      ctx.arc(100, 100, 100, currentAngle, currentAngle + portionAngle);
+      ctx.arc(75, 75, 75, currentAngle, currentAngle + portionAngle);
       currentAngle += portionAngle;
-      ctx.lineTo(100, 100);
+      ctx.lineTo(75, 75);
+      // ctx.lineTo(100, 100);
       //заполнение секторов соответствующим цветом
       ctx.fillStyle = moodValue.color;
       ctx.fill();
@@ -26,9 +27,11 @@ function Diagramma(props) {
   }, [props.data])
 
   return (
-    <div className="diagramma">
-      <canvas width={250} height={250} ></canvas>
-    </div>
+      <canvas
+        className="diagramma"
+        width={150}
+        height={150} >
+      </canvas>
   );
 };
 

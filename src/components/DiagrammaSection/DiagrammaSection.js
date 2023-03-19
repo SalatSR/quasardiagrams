@@ -7,17 +7,10 @@ function DiagrammaSection(props) {
   return (
     <section className='diagramma-section'>
       <h2 className='diagramma-section__title'>Статистика осмотров</h2>
-      {/* <canvas className='diagramma-section__diagramma-wrap' width="200" height="200"> */}
-      <div className='diagramma-section__diagramma-wrap'>
-        <Diagramma
-          data={props.data}
-        />
-      </div>
-      <div className='diagramma-section__hist-list'>
-        <HistList
-          data={props.data}
-        />
-      </div>
+      <article className='diagramma-section__content'>
+          <Diagramma data={props.data} />
+          <HistList data={props.data} />
+      </article>
     </section>
   )
 }
