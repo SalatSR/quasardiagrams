@@ -1,4 +1,4 @@
-let initialData = [
+export let initialData = [
   {
     'name': 'риски',
     'count': 1301,
@@ -16,9 +16,9 @@ let initialData = [
   },
   {
     'name': 'в ttttt',
-    'count': 815,
+    'count': 1000,
     'color': 'blue',
   },
 ];
 
-export default initialData;
+export let sectionState = 1;

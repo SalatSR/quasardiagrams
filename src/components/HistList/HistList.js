@@ -1,11 +1,16 @@
 import './HistList.css';
 import HistListItem from '../HistListItem/HistListItem';
 
-function HistList(props) {
+function HistList({data, state}) {
 
   return (
-    <ul className='hist-list'>
-      {props.data.map((sector) => {
+    <ul
+      className={`
+      hist-list
+      hist-list_${state}
+      `}
+    >
+      {data.map((sector) => {
         return ((
           <HistListItem
             name={sector.name}
