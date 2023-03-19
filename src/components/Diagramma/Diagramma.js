@@ -1,7 +1,9 @@
 import './Diagramma.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Diagramma(props) {
+
+  const [totalNumberOfPeople, setTotalNumberOfPeople] = useState('');
 
 
 
@@ -10,7 +12,7 @@ function Diagramma(props) {
 
     let dataArray = props.data;
     let ctx = document.querySelector("canvas").getContext("2d");
-    let totalNumberOfPeople = dataArray.reduce((sum, { count }) => sum + count, 0);
+    setTotalNumberOfPeople(dataArray.reduce((sum, { count }) => sum + count, 0));
     let currentAngle = 0;
 
     for (let moodValue of dataArray) {
@@ -25,7 +27,7 @@ function Diagramma(props) {
       ctx.fillStyle = moodValue.color;
       ctx.fill();
     }
-  }, [props.data])
+  }, [props.data, totalNumberOfPeople])
 
   return (
     <div className='diagramma-wrapper'>
@@ -35,10 +37,8 @@ function Diagramma(props) {
         height={150} >
       </canvas>
       <div
-        className='diagramma-info'
-        width={90}
-        height={90} >
-        <span className='diagramma-info_number'>2342</span>
+        className='diagramma-info'>
+        <span className='diagramma-info_number'>{totalNumberOfPeople}</span>
         <span className='diagramma-info_span'>всего</span>
       </div>
     </div>
