@@ -1,6 +1,6 @@
 import './App.css';
 import Main from './../Main/Main';
-import {initialData, sectionState} from '../../utils/initialData';
+import { initialData, sectionState } from '../../utils/initialData';
 
 function App() {
 
