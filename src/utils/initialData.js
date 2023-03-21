@@ -1,3 +1,7 @@
+/** Массив данных для построения диаграммы
+ * добавьте или удалите дополнительные объекты с 3мя обязательными параметрами:
+ * name, count и color
+ */
 export let initialData = [
   {
     'name': 'риски',
@@ -16,4 +20,4 @@ export let initialData = [
   },
 ];
 
-export let sectionState = 0;
+export let sectionState = 1;

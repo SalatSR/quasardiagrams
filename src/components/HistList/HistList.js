@@ -1,7 +1,7 @@
 import './HistList.css';
 import HistListItem from '../HistListItem/HistListItem';
 
-function HistList({data, state}) {
+function HistList({ data, state }) {
 
   return (
     <ul
@@ -10,9 +10,10 @@ function HistList({data, state}) {
       hist-list_${state}
       `}
     >
-      {data.map((sector) => {
+      {data.map((sector, index) => {
         return ((
           <HistListItem
+            key={index}
             name={sector.name}
             count={sector.count}
             color={sector.color}
