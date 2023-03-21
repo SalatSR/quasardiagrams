@@ -20,4 +20,4 @@ export let initialData = [
   },
 ];
 
-export let sectionState = 1;
+export let sectionState = 0;

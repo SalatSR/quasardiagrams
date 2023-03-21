@@ -1,34 +1,51 @@
 import './Diagramma.css';
 import { useEffect, useState } from 'react';
+import useWindowDimensions from './../../hooks/windowDimensions'
 
 function Diagramma({ data, state }) {
 
   /** Сумма показателей */
   const [totalNumberOfPeople, setTotalNumberOfPeople] = useState(null);
   /** Длина катета квадрата описывающий диаграмму */
-  const [sideOfOutterSquare, setsideOfOutterSquare] = useState(null);
+  const [sideOfOutterSquare, setSideOfOutterSquare] = useState(null);
   /** Длина катета квадрата описывающего пустоту в диаграмме */
-  const [sideOfInnerSquare, setsideOfInnerSquare] = useState(null);
+  const [sideOfInnerSquare, setSideOfInnerSquare] = useState(null);
   /** Центр квадратов */
   const [centerDiag, setCenterDiag] = useState(null);
+  /** Получаем ширину и высоту окна */
+  const { width } = useWindowDimensions();
 
-  /** Вычисляем ширину, высоту и центр, необходимые для отрисовки диаграммы */
+  /** Отслеживаем изменение ширины окна */
   useEffect(() => {
 
-    /** Считаем центр квадратов */
+    if (width <= 550) {
+      setSideOfOutterSquare(150);
+      setSideOfInnerSquare(90);
+    }
+    if (width >= 551 && width <= 800) {
+      setSideOfOutterSquare(285);
+      setSideOfInnerSquare(185);
+    }
+    if (width >= 801 && width <= 1278) {
+      setSideOfOutterSquare(420);
+      setSideOfInnerSquare(280);
+    }
+    if (width >= 1280) {
+      setSideOfOutterSquare(555);
+      setSideOfInnerSquare(375);
+    }
+
+  }, [width]);
+
+  /** Вычисляем центр диаграммы */
+  useEffect(() => {
+
     function calcCenterDiag() {
       setCenterDiag(sideOfOutterSquare / 2)
     }
+    calcCenterDiag(sideOfOutterSquare);
 
-    if (state === 2) {
-      calcCenterDiag(setsideOfOutterSquare(285));
-      setsideOfInnerSquare(185)
-    } else {
-      calcCenterDiag(setsideOfOutterSquare(150));
-      setsideOfInnerSquare(90)
-    }
-
-  }, [state, sideOfOutterSquare, centerDiag])
+  }, [sideOfOutterSquare])
 
   /** Отрисовываем диаграмму */
   useEffect(() => {
