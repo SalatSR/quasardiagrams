@@ -12,30 +12,69 @@ function Diagramma({ data, state }) {
   const [sideOfInnerSquare, setSideOfInnerSquare] = useState(null);
   /** Центр квадратов */
   const [centerDiag, setCenterDiag] = useState(null);
-  /** Получаем ширину и высоту окна */
+  /** Получаем ширину окна */
   const { width } = useWindowDimensions();
 
-  /** Отслеживаем изменение ширины окна */
+  /** Отслеживаем изменение ширины окна
+   * для каждого из состояний отображения
+   * диаграммы и истории
+   */
   useEffect(() => {
 
-    if (width <= 550) {
-      setSideOfOutterSquare(150);
-      setSideOfInnerSquare(90);
-    }
-    if (width >= 551 && width <= 800) {
-      setSideOfOutterSquare(285);
-      setSideOfInnerSquare(185);
-    }
-    if (width >= 801 && width <= 1278) {
-      setSideOfOutterSquare(420);
-      setSideOfInnerSquare(280);
-    }
-    if (width >= 1280) {
-      setSideOfOutterSquare(555);
-      setSideOfInnerSquare(375);
+    if (state === 0) {
+      if (width <= 550) {
+        setSideOfOutterSquare(150);
+        setSideOfInnerSquare(90);
+      }
+      if (width >= 551 && width <= 800) {
+        setSideOfOutterSquare(285);
+        setSideOfInnerSquare(185);
+      }
+      if (width >= 801 && width <= 1278) {
+        setSideOfOutterSquare(420);
+        setSideOfInnerSquare(280);
+      }
+      if (width >= 1279) {
+        setSideOfOutterSquare(555);
+        setSideOfInnerSquare(375);
+      }
     }
 
-  }, [width]);
+    if (state === 1) {
+      if (width <= 800) {
+        setSideOfOutterSquare(150);
+        setSideOfInnerSquare(90);
+      }
+      if (width >= 801 && width <= 1278) {
+        setSideOfOutterSquare(285);
+        setSideOfInnerSquare(185);
+      }
+      if (width >= 1279) {
+        setSideOfOutterSquare(420);
+        setSideOfInnerSquare(280);
+      }
+    }
+
+    if (state === 2) {
+      if (width <= 550) {
+        setSideOfOutterSquare(150);
+        setSideOfInnerSquare(90);
+      }
+      if (width >= 551 && width <= 800) {
+        setSideOfOutterSquare(285);
+        setSideOfInnerSquare(185);
+      }
+      if (width >= 801 && width <= 1278) {
+        setSideOfOutterSquare(420);
+        setSideOfInnerSquare(280);
+      }
+      if (width >= 1279) {
+        setSideOfOutterSquare(555);
+        setSideOfInnerSquare(375);
+      }
+    }
+
+  }, [width, state]);
 
   /** Вычисляем центр диаграммы */
   useEffect(() => {

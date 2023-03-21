@@ -11,16 +11,10 @@
   transition: all .2s linear;
 }
 
-.diagramma-section_0 {
-  width: 250px;
-}
-
-.diagramma-section_1 {
-  width: 520px;
-}
-
+.diagramma-section_0,
+.diagramma-section_1,
 .diagramma-section_2 {
-  width: 520px;
+  width: 250px;
 }
 
 .diagramma-section__title {
@@ -32,26 +26,33 @@
 
 .diagramma-section__content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   transition: all .2s linear;
 }
 
-.diagramma-section__content_1 {
-  justify-content: space-around;
-}
-
-@media screen and (min-width: 550px) {
-  .diagramma-section {
-    padding: 20px 25px 40px;
-  }
+@media screen and (min-width: 551px) {
 
   .diagramma-section_0 {
-    padding: 20px 32px;
+    padding: 20px 32px 32px;
+    width: 360px;
+  }
+
+  .diagramma-section_1,
+  .diagramma-section_2 {
+    padding: 20px 32px 51px;
+  }
+
+  .diagramma-section_1 {
+    width: 520px;
   }
 
   .diagramma-section_2 {
-    padding: 20px 32px 51px;
+    width: 400px;
+  }
+
+  .diagramma-section__title_0 {
+    font-size: 18px;
   }
 
   .diagramma-section__title_1,
@@ -60,7 +61,9 @@
   }
 
   .diagramma-section__content_1 {
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: space-around;
     min-width: 100%;
   }
 
@@ -70,4 +73,42 @@
   }
 }
 
-@media screen and (min-width: 800px) {}
+@media screen and (min-width: 801px) {
+
+  .diagramma-section_0,
+  .diagramma-section_2 {
+    padding-bottom: 50px;
+    width: 530px;
+  }
+
+  .diagramma-section_1 {
+    width: 640px;
+  }
+
+  .diagramma-section__title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+
+  .diagramma-section {
+    padding-top: 35px;
+    padding-bottom: 60px;
+  }
+
+  .diagramma-section_0,
+  .diagramma-section_2 {
+    width: 680px;
+  }
+
+  .diagramma-section_1 {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 940px;
+  }
+
+  .diagramma-section__title_0 {
+    font-size: 22px;
+  }
+}

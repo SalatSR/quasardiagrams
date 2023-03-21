@@ -1,9 +1,8 @@
-import './Main.css';
 import PropTypes from 'prop-types'
 import Header from '../Header/Header';
 import DiagrammaSection from '../DiagrammaSection/DiagrammaSection';
 
-/** Задаём дефолтные значения для исключения ошибок */
+/** Задаём дефолтные значения на случай пропущенных/пустых данных */
 Main.defaultProps = {
   data: PropTypes.arrayOf(PropTypes.shape({
     name: 'Данные не переданы',

@@ -21,12 +21,9 @@
 }
 
 .diagramma-info_number_0,
-.diagramma-info_number_1 {
-  font-size: 20px;
-}
-
+.diagramma-info_number_1,
 .diagramma-info_number_2 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .diagramma-info_span {
@@ -35,10 +32,62 @@
 }
 
 .diagramma-info_span_0,
-.diagramma-info_span_1 {
+.diagramma-info_span_1,
+.diagramma-info_span_2 {
   font-size: 10px;
 }
 
-.diagramma-info_span_2 {
-  font-size: 16px;
+@media screen and (min-width: 551px) {
+
+  .diagramma-info_number_0,
+  .diagramma-info_number_2 {
+    font-size: 45px;
+  }
+
+  .diagramma-info_span_0,
+  .diagramma-info_span_2 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+
+  .diagramma-info_number_0,
+  .diagramma-info_number_2 {
+    font-size: 65px;
+  }
+
+  .diagramma-info_number_1 {
+    font-size: 45px;
+  }
+
+  .diagramma-info_span_0,
+  .diagramma-info_span_2 {
+    font-size: 25px;
+  }
+
+  .diagramma-info_span_1 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+
+  .diagramma-info_number_0,
+  .diagramma-info_number_2 {
+    font-size: 85px;
+  }
+
+  .diagramma-info_number_1 {
+    font-size: 65px;
+  }
+
+  .diagramma-info_span_0,
+  .diagramma-info_span_2 {
+    font-size: 30px;
+  }
+
+  .diagramma-info_span_1 {
+    font-size: 25px;
+  }
 }

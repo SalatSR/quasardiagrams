@@ -22,7 +22,7 @@ function HistListItem({ name, count, color, state }) {
       <span className={`
         hist-list-item__spacer
         hist-list-item__spacer_${state}
-      `}>&#183;</span>
+      `}>&#160;&#183;</span>
       <span className={`
         hist-list-item__count
         hist-list-item__count_${state}
