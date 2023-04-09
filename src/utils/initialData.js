@@ -36,5 +36,8 @@ export let initialData = [
   },
 ];
 
+// Не понятно что означают цифры 0, 1, 2.
+// Лучше использовать именованные константы:
+// https://refactoring.guru/ru/replace-magic-number-with-symbolic-constant
 /** Число задаёт состояние диаграммы, значения 0, 1, 2 */
 export let sectionState = 0;
