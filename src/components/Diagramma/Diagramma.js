@@ -2,6 +2,7 @@ import './Diagramma.css';
 import { useEffect, useState } from 'react';
 import useWindowDimensions from './../../hooks/windowDimensions'
 
+// Так же как Main, App и Header, логично было бы назвать этот компонент по-английски - Diagram
 function Diagramma({ data, state }) {
 
   /** Сумма показателей */
@@ -56,6 +57,8 @@ function Diagramma({ data, state }) {
     }
 
     if (state === 2) {
+      // Вся логика в этой ветке полностью идентична случаю (state === 0)
+      // Возможно, их имеет смысл объединить.
       if (width <= 550) {
         setSideOfOutterSquare(150);
         setSideOfInnerSquare(90);
@@ -91,6 +94,10 @@ function Diagramma({ data, state }) {
 
     let dataArray = data;
     let ctx = document.querySelector(".diagramma").getContext("2d");
+
+    // setTotalNumberOfPeople сильно огранивает сферу применения диаграммы.
+    // Получается, что кроме распределения людей она ничего показывать не должна.
+    // Я бы предложил использовать здесь более абстрактную терминологию
     setTotalNumberOfPeople(dataArray.reduce((sum, { count }) => sum + count, 0));
     let currentAngle = 0;
 
